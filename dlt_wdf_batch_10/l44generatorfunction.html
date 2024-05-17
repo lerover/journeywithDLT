@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Generator Function</title>
+</head>
+
+<body>
+	<script type='text/javascript'>
+
+//            (3)Generator Function
+//              (i)yield
+//              (ii)next()
+
+		function test1(){
+			return 10;
+		}
+		
+		console.log(test1());//10
+		console.log(test1());//10
+		console.log(test1());//10
+
+		function test2(){
+			var x=1
+			x++;
+			return x;
+		}
+		console.log(test2());//2
+		console.log(test2());//2
+		console.log(test2());//2
+
+        var y=1
+		function test3(){
+			y++;
+			return y;
+		}
+		console.log(test3());//2
+		console.log(test3());//3
+		console.log(test3());//4
+
+
+
+		function* genfun(){
+			//yield 1
+
+			yield 1
+			yield 2
+			yield 3
+		}
+
+		// console.log(genfun());
+        // console.log(genfun().next()); //{value:1 , done:false}
+		// console.log(genfun().next().value); //1
+		// console.log(genfun().next().value); //1
+		// console.log(genfun().next().value); //1
+
+		const getgenfun = genfun();
+        
+        // console.log(getgenfun);// 
+        // console.log(getgenfun.next()); //{value:1 , done:false}
+		console.log(getgenfun.next().value);// 1         1
+		console.log(getgenfun.next().value);//undefined  2
+		console.log(getgenfun.next().value);//undefined  3
+		console.log(getgenfun.next().value);//undefined  undefined
+
+	</script>
+</body>
+
+</html>
+
+

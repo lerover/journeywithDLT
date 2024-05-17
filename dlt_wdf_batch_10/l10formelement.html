@@ -1,0 +1,172 @@
+<html>
+
+<head>
+	<title>Form Elements</title>
+</head>
+
+<body>
+
+	<h3>Form Elements</h3>
+	
+	<form action="./database/db.php" method="" enctype="multipart/form-data"> <!--  (enctype) should be used if only file/attachement is written -->
+
+	<label for="firstname">First Name</label>
+	<input type="text" name ="firstname" id="firstname" class="" placeholder="Enter Your First Name" />
+
+	<br/><br/>
+
+	<label for="lastname">Last Name</label>
+	<input type="text" name ="lastname" id="lastname" class="" placeholder="Enter Your Last Name"/>
+
+	<br/><br/>
+
+	<label for="age">Age</label>
+	<input type="number" name ="age" id="age" class="" placeholder="Enter Your Age" />
+
+	<br/><br/>
+
+	<label for= "password">Password</label>
+	<input type="password" name ="password" id="password" class="" placeholder="Enter Your password"/>
+
+	<br/><br/>
+
+	<label>
+	Gender
+	</label>
+	<input type="radio" name="gender" id="genderm" class="" value="1" /><label for="gnederm">Male</label>
+	<input type="radio" name="gender" id="genderf" class="" value="0" /><label for="gnederf">Female</label>
+	<input type="radio" name="gender" id="gendero" class="" value="2"/><label for="gnedero">Other</label>
+
+	<br/><br/>
+
+	<label>Fruit</label>
+	<input type="radio" name="fruit" id="fruitap" class="" value="0" /><label for="fruitap">Apple</label>
+	<input type="radio" name="fruit" id="fruitor" class="" value="1" /><label for="fruitor">Orange</label>
+	<input type="radio" name="fruit" id="fruitpp" class="" value="2"/><label for="fruitpp">Pineapple</label>
+
+	<br/><br/>
+
+	<label>
+	Choose Your Fav Color
+    </label>
+	<input type="checkbox" name="favcolor" id="favrd" class="" value="0" /><label for="favrd">Red</label>
+	<input type="checkbox" name="favcolor" id="favgr" class="" value="1" /><label for="favgr">Green</label>
+	<input type="checkbox" name="favcolor" id="favbl" class="" value="2"/><label for="favbl" >Blue</label>
+	<input type="checkbox" name="favcolor" id="favwh" class="" value="3"/><label for="favwh">White</label>
+
+	<br/><br/>
+
+	<label for="conutry">
+	Citizen
+    </label>
+       <select name="conutry"id='conutry'class=''>
+
+       	<option selected disabled>Choose Country</option>
+        <option value="mm">Myanmar</option>
+        <option value="thi">Thailand</option>
+        <option value="php">Philipine</option>
+        <option value="slk">Sri Lanka</option>
+       </select>
+
+    <br/><br/>
+
+	<label for="role">
+	Role
+    </label>
+       <select name="role"id='role'class='' multiple>
+ 
+        <option value="1">Manager</option>
+        <option value="2">Editor</option>
+        <option value="3">Supervisor</option>
+        <option value="4">Sales</option>
+       </select>
+
+     <br/><br/>
+     
+     <label for="dob">
+     	Date of Birth
+     </label> 
+     <input type="date"  name="dob" id="dob" class="" />
+
+     <br/><br/>
+     
+     <label for="bookingtime">
+     	Booking Time
+     </label> 
+     <input type="time"  name="bookingtime" id="bookingtime" class="" />
+
+     <br/><br/>
+
+     <label for="apt">
+       Appointment
+     </label>
+     <input type="datetime-local" name="apt" id="apt" class="" />
+
+     <br/><br/>
+
+     <label for="volume">
+       Volume
+     </label>
+     <input type="range" name="volume" id="volume" class="" min="0" max="100" value="0" step="10" />
+
+     <br/><br/>
+
+     <label for="nrc">
+     	NRC
+     </label>
+     <input type="file" name="nrc" id="nrc" class="" accept="image/*" capture="user" multiple /> <!-- (capture="user") can be only used for Android --> 
+
+     <br/><br/>
+
+
+     <label for="vdo">
+     	Video
+     </label>
+     <input type="file" name="vdo" id="vdo" class="" accept="video/*" capture="enviroment" />
+
+     <br/><br/>
+
+     <label for="email">
+     	E-mail
+     </label>
+     <input type="email" name="email" id="email" class="" placeholder="Enter Your E-mail" />
+
+     <br/><br/>
+
+     <label for="bio">
+     	Bio
+     </label>
+     <textarea name="bio" id="bio" class="" rows="3" placeholder="Enter your Bio"></textarea>
+
+     <br/><br/>
+
+     <input type="text" name="test" id="test" class="" hidden />
+     <input type="hidden" name="test" id="test" class=""/>
+
+     <br/><br/>
+
+     <input type="reset" name="resetbtn" id="resetbtn" class="" value="Cancel" />
+     <input type="button" name="login" id="login" class="" value="Login" />
+
+     <button type="submit" name="submitbtn" id="submitbtn" class="">Submit</button>
+     <button type="button" name="signup" id="signup" class="">Register</button>
+
+     </form>
+
+
+</body>
+
+</html>
+
+<!-- self closing tag (or) stand alone attribute
+
+checked
+selected (can be only used for select box)
+disabled
+readonly
+multiple
+hidden
+
+ -->
+
+

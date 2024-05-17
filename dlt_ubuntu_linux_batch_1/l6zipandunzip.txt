@@ -1,0 +1,54 @@
+=>Zip
+zip l1sample.zip l1inro.txt
+zip l5sample.zip l5example.txt l5file.txt l5sample.txt
+zip l3sample.zip l3history.txt l4folder.txt myfolder9 yourfolder8
+zip allfiles.zip *       (all/any)
+
+
+=>Unzip
+mkdir -p myzip
+cp -r allfiles.zip myzip/
+cd myzip/
+ls
+du -h allfiles.zip
+unzip allfiles.zip
+
+----------------------------------------------------------------
+
+=>tar
+
+(
+    c = tar to create a new archive
+    v = set the screen output to verbose then  will update
+    f = point to the filename then want to archive
+)
+
+tar cvf l1example.tar l1intro.txt
+tar fvc l5sample.tar l5example.txt l5file.txt l5sample.txt
+tar fcv allfiles.tar *
+
+
+=>Extract tar
+cp -r l1example.tar myzip/
+cd myzip
+ls
+du -h l1example.tar
+tar xvf l1example.tar
+
+
+----------------------------------------------------------------
+
+
+=>gzip
+
+du -sh l1example.tar
+gzip -v l1example.tar
+du -sh l1example.tar.gz
+
+=>gunzip (extract gzip)
+gunzip -v l1example.tar.gz
+
+=>Extract tar
+tar xvf l1example.tar
+
+----------------------------------------------------------------

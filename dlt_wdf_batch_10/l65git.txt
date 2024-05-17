@@ -1,0 +1,24 @@
+=>git
+
+=>One Times
+after git install
+git
+git --version       (git version 2.43.0)
+
+git config --global user.name "Savrancoeur"
+git config user.name
+
+git config --global user.email "mario.thuta@gmail.com"
+
+
+=>SSH ( Secure Shell )
+
+ssh-keygen
+
+ssh -T git@github.com
+
+
+=>github
+
+git init
+git remote add origin "git@github.com:Savrancoeur/pttsoftware.git"

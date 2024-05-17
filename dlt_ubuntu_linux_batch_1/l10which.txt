@@ -1,0 +1,8 @@
+which ( which can show installed application located )
+which ls        = usr/bin/ls
+which cat       = usr/bin/cat
+which vi        = usr/bin/vi
+which vim       = usr/bin/vim
+which nano      = usr/bin/nano
+which zoom      = usr/bin/zoom
+which plocate   = usr/bin/plocate

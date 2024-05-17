@@ -1,0 +1,68 @@
+/*Pseudo class*/
+
+.div1{
+	width: 300px;
+	height:100px;
+	background-color: green;
+}
+
+/*.div1:first-child{
+	background-color: orange;
+	color:blue;
+} */
+
+/*.div1:first-of-type{
+	background-color: orange;
+	color:blue;
+}*/  /*can be used even if the class is interfered by <hr/>*/
+
+/*.div1:last-child{
+	background-color: tan;
+	color:blue;
+} */
+
+/*.div1:last-of-type{
+	background-color: tan;
+	color:blue;
+} */ /*can be used even if the class is interfered by <hr/>*/
+
+
+
+
+/*.div1:nth-child(8){
+	background-color: orange;
+	color:blue;
+}*/ 
+
+/*.div1:nth-of-type(5){
+	background-color: tan;
+	color:blue;
+}*/   /*can be used even if the class is interfered by <hr/>*/
+
+
+/*.div1:nth-child(even){
+	background-color: orange;
+	color:blue;
+}*/
+
+/*.div1:nth-child(odd){
+	background-color: orange;
+	color:blue;
+}*/ 
+
+.div1:nth-of-type(even){
+	background-color: tan;
+	color:blue;
+}
+
+.div1:nth-of-type(odd){
+	background-color: tan;
+	color:blue;
+} 
+
+/*Ordinary Number
+1st
+2nd
+3rd
+4th
+5th ......*/

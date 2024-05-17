@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Statement</title>
+</head>
+
+
+<body>
+
+  <h1>Statement</h1>
+
+  <script type="text/javascript">
+
+    //ternary operator (?)
+    // c1 > c2 ? true : false;
+
+    const x=100;
+    const y=200;
+
+    console.log( x > y ? "Yes,it is true.": "No,it is false.") // No,it is false.
+    console.log( x < y ? "Yes,it is true.": "No,it is false.") // Yes,it is true.
+    console.log( x== y ? "x is equal to y.": (x<y) ? "x is lesser than y." : "x is greater than y.") // x is lesser than y.
+
+
+    const num1 = 200;
+    const num2 = "200";
+
+    //check value
+    console.log("== equal to result =" + (num1 == num2 ? "true":"false"));// == equal to result =true
+
+    //check value & data type
+    console.log("=== equal to result =" + (num1 === num2 ? "true":"false"));// === equal to result =false
+
+    //check value
+    console.log("!= not equal to result =" + (num1 != num2 ? "true":"false"));// != not equal to result =false
+
+    //check value & data type
+    console.log("!== not equal to result =" + (num1 !== num2 ? "true":"false"));// !== not equal to result =true
+
+
+    console.log("> greater than result =" + (num1 > num2 ? "true":"false"));// > equal to result =false
+    console.log(">= greater than or equal to result =" + (num1 >= num2 ? "true":"false"));// >= equal to result =true
+
+    console.log("< lesser than result =" + (num1 < num2 ? "true":"false"));// < equal to result =false
+    console.log("<= lesser than or equal to result =" + (num1 <= num2 ? "true":"false"));// <= equal to result =true
+
+
+
+    // if statement
+
+    // if(condition){
+    //   code to be execute
+    // };
+
+    const idx=30;
+
+    if(idx <10){
+      console.log('Hello');
+    }
+
+    if(idx <100){
+      console.log('Hi');
+    }
+
+    if(idx >10){
+      console.log('Correct');
+    }else{
+      console.log('Incorrect');
+    }
+
+    if(idx=="30"){
+      console.log('Correct');
+    }else{
+      console.log('Incorrect');
+    }
+
+    if(idx==="30"){
+      console.log('Correct');
+    }else{
+      console.log('Incorrect');
+    }
+
+    if(idx!="30"){
+      console.log('Correct');
+    }else{
+      console.log('Incorrect');
+    }
+
+    if(idx!=="30"){
+      console.log('Correct');
+    }else{
+      console.log('Incorrect');
+    }
+
+
+
+    //else if()
+
+    // if(condition){
+    //   code to be execute;
+    // }else if(condition){
+    //   code to be execute;
+    // }else if(condition){
+    //   code to be execute;
+    // }else{
+    //   code to be execute;
+    // }
+
+
+    const j=1000;
+    const k=1000;
+
+    if(j > k){
+      console.log("Yes, j is greater than k.");
+    }else if(j == k){
+      console.log("j is equal to k.");
+    }else{
+      console.log("No, j is lesser than k.")
+    }
+
+
+    //Nested Condition
+
+    const passcode= "hifi123";
+    //console.log(passcode.length) //7
+
+    if(passcode.length>=5){
+      //console.log("Good Password.")
+
+      if(passcode.indexOf(' ')===-1){
+        console.log("Valid Password.")
+      }else{
+        console.log("Password length is enough but should not contain space.")
+      }
+
+
+    }else{
+      console.log("Password must be longer.")
+    }
+
+
+
+    //switch statement
+
+    // switch(statement){
+    //     case condition:
+    //         code to be executed;
+    //         break;
+    //     case condition:
+    //         code to be executed;
+    //         break;
+    //     case condition:
+    //         code to be executed;
+    //         break;
+    //     case condition:
+    //         code to be executed;
+    //         break;
+    //     default:
+    //         code to be executed;
+    //         break;
+    // }
+
+    const color="violet";
+
+    switch(color){
+
+        case "red":
+            console.log("My fav color is not red.");
+            break;
+        case "white":
+            console.log("My fav color is not white.");
+            break;
+        case "green":
+            console.log("I hate green.")
+            break;
+        case "violet":
+            console.log("Correct!!! My fav color is violet.")
+            break;
+        default:
+            console.log("Try Again.")
+            break;    
+    }
+
+
+    let getday= new Date().getDay();
+    console.log(getday);
+
+    let today;
+    console.log(today);
+
+    switch(getday){
+        case 0:
+          today = "Sunday";
+          break;
+        case 1:
+          today = "Monday";
+          break;
+        case 2:
+          today = "Tuesday";
+          break;
+        case 3:
+          today = "Wednesday";
+          break;
+        case 4:
+          today = "Thursday";
+          break;
+        case 5:
+          today = "Friday";
+          break;
+        default:
+          today = "Saturday"          
+
+    }
+
+    console.log(today);
+
+
+
+    let p = 10;
+    let q = 50;
+
+    // p = q
+    // console.log(p);//50
+
+    // p =p + q
+    // console.log(q);//60
+
+    // p += q
+    // console.log(p); //60
+
+    // p -= q
+    // console.log(p);//-40
+
+    // q -= p
+    // console.log(q);//40
+
+    // p *= q
+    // console.log(p);//500
+
+    // q /= p
+    // console.log(q);//5
+
+    // q %= p
+    // console.log(q);//0
+
+
+
+    const username= prompt("enter your username");
+    const password= prompt("enter your password");
+
+    console.log(username,password);
+    console.log(typeof username,typeof password); // string string
+
+    if(username==="aungaung" && password ==="12345"){
+      console.log("Welcome Aung Aung");
+    }else{
+      console.log("Try Again");
+    }
+
+    // if(username==="aungaung" || password ==="12345"){
+    //   console.log("Welcome Aung Aung");
+    // }else{
+    //   console.log("Try Again");
+    // }
+
+
+
+
+
+  </script>
+
+</body>
+</html>
+
+
+
+<!--
+
+Comparison Operators
+
+==      equal to
+===     equal to
+!=      not equal to
+>       greater than
+<       lesser than
+>=      greater than or equal to
+<=      lesser than or equal to
+?       statement(ternary operator)
+
+
+Assignment Operator
+
+=
++=
+-=
+*=
+/=
+%= 
+
+
+Logical Operators
+
+&&      and
+||      or
+!       not
+
+-->

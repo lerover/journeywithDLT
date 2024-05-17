@@ -1,0 +1,52 @@
+/* Variable */
+/* Custom Properties */
+
+:root{
+	 --or:orange;
+	 --rc:red;
+	 --gn:#0d8f27;
+	 --sil:rgba(140, 131, 135, 0.8);
+	 --gdc:linear-gradient(red,orange);
+
+}
+
+.div1{
+	--wid:100px;
+	width: var(--wid);
+	height: 100px;
+	background-color: var(--or);
+
+	float:left;
+}
+
+.div2{
+	width: 200px;
+	height: 200px;
+	background-color: var(--rc);
+
+	float:left;
+}
+
+.div3{
+	width: 300px;
+	height: 300px;
+	background-color: var(--gn);
+
+	float:left;
+}
+
+.div4{
+	width: 400px;
+	height: 400px;
+	background-color: var(--sil);
+
+	float:left;
+}
+
+.div5{
+	width: 500px;
+	height: 500px;
+	background: var(--gdc);
+
+	float:left;
+}

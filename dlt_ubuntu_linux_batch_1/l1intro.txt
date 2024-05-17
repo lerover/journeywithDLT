@@ -1,0 +1,74 @@
+=>32 bit vs 64 bit
+
+Free
+Not user-friendly
+very reliable
+best for multi-tasking
+very secure
+open to public
+
+
+=>Linux Kernel
+
+=>Linux Distribution
+https://distrowatch.com/
+https://distrowatch.com/ > Menu Bar > Distrowatch.com > Page Hit Ranking
+
+Ubuntu         Free / Pro
+CentOS         Free
+Redhat         Paid (Not Open Source)
+Fedora         Free
+SuSe           Free / Pro
+Debian         Free
+Linux Mint     Free
+Arch Linux     Free
+
+=> Open Terminal (Linux is case sensitive operation system)
+ctrl+ alt+ T
+
+=>Linux Color Coding
+Blue = Directory (such as url,etc....)
+Green = Executable or organized data file
+SkyBlue = Symbolic link file
+Pink = Graphic image file
+Red = Archive file (zip,tar,,tar.gz,etc..)
+
+=>commom directories
+/        "Root" the top of the file system
+/bin     Binary or executable programs
+/etc     System configuration files
+/home    home directory. it is the default current directory
+/opt     optional or third-party software
+/tmp     Temporty space,typically cleared on reboot
+/usr     user related programs
+/var     Variable data, most notably log files
+
+=>Basic common line
+
+ls    -  list directory contents
+cd    -  change the directory
+pwd   -  display the present working directory
+cat   -  concatenate and display file
+echo  -  display arguments to the screen
+exit  -  exit the shell or your current session
+clear -  clear the screen
+
+=>APT(Advanced Packing Tool)
+
+sudo apt-get update
+sudo apt update
+
+sudo apt-get upgrade
+sudo apt upgrade
+
+sudo apt-get upgrade -y
+sudo apt upgrade -y
+
+sudo apt-get update && sudo apt-get upgrade -y
+
+
+Linux website knowledge
+
+ab -n 500 site.example.com/                  =>to check the speed of the website
+top                                          =>to check the activity of the laptop
+

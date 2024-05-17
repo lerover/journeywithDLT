@@ -1,0 +1,29 @@
+=>Check Time & Date
+date                =   Wed Mar 27 22:44:34 +0630 2024
+date -u             =   Wed Mar 27 16:15:05 UTC 2024
+
+date +"%T"          =   22:46:46
+date +"%d"          =   27
+date +"%D"          =   03/27/24
+date +"%F"          =   2024-03-27
+date +"%m"          =   03
+date +"%y"          =   24
+date +"%Y"          =   2024
+date +"%d-%m-%y"    =   27-03-24
+
+
+timedatectl         =   Local time: Wed 2024-03-27 22:59:03 +0630
+                        Universal time: Wed 2024-03-27 16:29:03 UTC
+                        RTC time: Wed 2024-03-27 16:29:03
+                        Time zone: Asia/Yangon (+0630, +0630)
+                        System clock synchronized: yes
+                        NTP service: active
+                        RTC in local TZ: no
+
+
+
+=>Using cal
+sudo apt install ncal
+cal
+cal 2024
+cal 2 2022

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Date & Time</title>
+</head>
+
+<body>
+
+	<div class="footer">
+		<small>Copyright <span id="autoyear">2023</span> Cable News Network. A Warner Bros. Discovery Company. All Rights Reserved.</small>
+	</div>
+
+
+	<script type="text/javascript">
+
+		let date= new Date(); //class //object
+		console.log(date); //Mon Jan 01 2024 20:48:44 GMT+0630 (Myanmar Time)
+		console.log(new Date()); //Mon Jan 01 2024 20:48:44 GMT+0630 (Myanmar Time)
+
+        // let getdate = new Date().getDate(); //class method
+		let getdate = date.getDate();
+		console.log(getdate); //1
+
+		let hour= date.getHours();
+		console.log(hour);
+
+		let minute = date.getMinutes();
+		console.log(minute);
+
+		let second = date.getSeconds();
+		console.log(second);
+
+		// 1s =1000ms
+		// 1 jan 1970 => up to now
+		let time= date.getTime();
+		console.log(time); //1704119975665
+
+		let now = Date.now();
+		console.log(now); //1704120224656
+
+        //array []
+        // index number =0 (0 to 11)
+        //   0     1     2     3     4     5     6     7     8     9     10    11
+        //['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec']
+		let month = date.getMonth();
+		console.log(month);
+
+        //   0     1     2     3     4     5    6 
+        //['sun','mon','tue','wed','thu','fri',sat]
+		let day = date.getDay();
+		console.log(day);
+
+		//Coordinated Universal time -12 to +12 (MM=+6:30)
+		let utcyear= date.getUTCFullYear();
+		console.log(utcyear);
+
+        // document.getElementById("autoyear").textContent =utcyear;
+		// document.getElementById("autoyear").innerText =utcyear;
+		document.getElementById("autoyear").innerHTML =utcyear;
+
+		//m d yr hrs:m:s
+		let birthday = new Date('7-10-2020');
+		   // birthday = new Date('8-1-2023 11:35:01');
+		   // birthday = new Date('Aug 1 2023 11:35:02');
+		   // birthday = new Date('July 1 2023 11:35:01');
+		   // birthday = new Date('7/11/2003 08:31:00');
+
+		console.log(birthday);
+
+		birthday.setMonth(2);
+		birthday.setDate(15);
+		birthday.setFullYear(2024);
+
+		birthday.setHours(16);
+		birthday.setMinutes(45);
+		birthday.setSeconds(32);
+
+		console.log(birthday);
+		
+	</script>
+
+</body>
+
+</html>

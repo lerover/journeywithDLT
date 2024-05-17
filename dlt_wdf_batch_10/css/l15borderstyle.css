@@ -1,0 +1,130 @@
+.bdstyle1{
+	border-style: solid;
+}
+
+.bdstyle2{
+	border-style: double;
+}
+
+.bdstyle3{
+	border-style: dotted;
+}
+
+.bdstyle4{
+	border-style: dashed;
+}
+
+.bdstyle5{
+	border-style: inset;
+}
+
+.bdstyle6{
+	border-style: outset;
+}
+
+.borderdesign{
+	width: 300px;
+	height: 300px;
+
+
+	background: yellow; 
+/*  background-color: orange;  |for the solid color|  */ 
+/*  background: #144382;*/
+
+    border-style: solid;
+
+/*  border-radius: 20%; */ /*  50% or 100% for circle */
+/*  border-radius: 150px;*/ /*  half px for the circle shape*/
+   
+/*  border-radius: 10px 50px; */ /* clockwise rotation */
+
+/*    border-radius: 10px 50px 100px 200px;*/
+
+/*  s s c*/
+/*  stroke style color*/
+/*  border:5 px dashed blue;*/
+    border:3px dotted #05195c;
+
+
+}
+
+
+
+ul{
+/*	list-style-type: none;*/
+/*	list-style: none;*/
+
+/*	       b c s*/
+
+/*	border:1px solid orange;*/
+}
+
+
+li{
+/*	list-style-type: none;*/
+/*	list-style: none;*/
+
+
+/*           b    s    c    */
+/*	border:1px solid orange;*/
+
+/*    border: 1px;
+    border-style: solid;
+    border-color: orange;
+*/
+
+/*  list-style-type: circle;*/
+/*  list-style-type: square;*/
+/*  list-style-type: decimal;*/
+/*  list-style-type: decimal-leading-zero;*/
+
+    list-style-position: inside;
+/*  list-style-position: outside; */
+}
+
+
+/*Attribute Selector*/
+input[type="text"]{
+	width:300px;
+	background-color: gold;
+	color:#fff;
+	border-radius: 10px;
+
+}
+
+input[type="password"],input[type="email"]{
+	background-color: blue;
+	border-radius: 10px;
+}
+
+
+body{
+/*                      Uniform Resource Locator */
+	background-image: url(./../img/fav/yelan_icon.png);
+/*	background-repeat: repeat;*/
+	background-repeat: no-repeat;
+
+/*	background-position: center;*/
+/*  background-position: left;*/
+/*  background-position: right;*/
+    background-position: top;
+/*  background-position: bottom;*/
+
+/*                           x    y  */
+/*  background-position: right top;*/
+/*  background-position: left top;*/
+/*  background-position: right bottom;*/
+/*  background-position: left bottom;*/
+
+/*  background-attachment: fixed;*/
+    background-attachment: scroll;
+
+}
+
+
+
+
+
+
+
+

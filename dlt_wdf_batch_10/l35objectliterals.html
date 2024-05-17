@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Object Literals</title>
+</head>
+
+
+<body>
+     
+     <h1>Object Literals</h1>
+
+	<script type="text/javascript">
+
+		let students= {
+			firstname : "Honey",
+			middlename : "Nway",
+			lastname : "Oo",
+			age : 22
+		}
+
+		let firstname= "Tun"; // this var will not overwrite the key from the dictionary above.
+
+		console.log(students);
+		console.info(students);
+		console.table(students);
+		console.log(typeof(students));
+
+		console.log(students.firstname);
+		console.log(students.middlename);
+		console.log(students.lastname);
+		console.log(students.age);
+
+          // ANOTHER EXAMPLE
+
+		const persons = {
+			firstname:"kyaw kyaw",
+			lastname:"htay lwin",
+			age : 43,
+			single:false,
+			email:"kyawkyaw@gmail.com",
+
+			address :{
+				street:"62nd",
+				township:"Ahlone"
+			},
+
+			hometown :{
+				city:"Yangon"
+			},
+
+			hobbies : ['sleep','eat','code','music','sport']
+		};
+
+		console.log(persons);
+		console.table(persons);
+
+		console.log(persons.firstname);
+		console.log(persons.age);
+		console.log(persons.single);
+		console.log(typeof persons.single);
+
+		console.log(persons.hometown);
+		console.log(persons.hometown.city);
+
+		console.log(persons.address);
+		console.log(persons.address.street);
+		console.log(persons.address.township);
+
+		console.log(persons.hobbies);
+		console.log(persons.hobbies[2]);
+		console.log(persons.hobbies[4]);
+		console.log(persons.hobbies.length);
+		console.log(persons.hobbies[5-1]);
+		console.log(persons.hobbies[persons.hobbies.length-1]);
+
+	</script>
+
+</body>
+
+</html>

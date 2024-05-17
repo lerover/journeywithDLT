@@ -1,0 +1,354 @@
+=>File Permission
+
+compgen -u
+sudo useradd user10 -m
+compgen -u
+sudo passwd user10
+new password = 123456789
+retry new password = 123456789
+
+
+whoami              // administrator
+cd /
+ls
+cd home
+ls -l
+cd user10           // user10: permission denied
+exit
+
+
+su -
+password:123456789abc
+whoami              //root
+cd /
+ls
+cd home
+ls -l
+cd user10           // can access
+pwd
+exit
+
+su user10
+123456789
+whoami              //user10
+cd /
+ls
+cd home
+ls -l
+cd user10           // can access
+pwd
+cd /
+exit
+
+
+=>remove group permission
+chmod g-x user10
+chmod g-w user10
+chmod g-r user10
+
+cd user10           // can access
+pwd
+cd /
+cd home
+ls -l
+
+whoami              // user10
+
+
+=>remove other permission
+chmod o-x user10
+chmod o-w user10
+chmod o-r user10
+
+cd user10           // can access
+pwd
+cd /
+cd home
+ls -l
+
+whoami              // user10
+
+
+=>remove user permission
+chmod u-x user10    // can access
+chmod u-w user10    // can access
+chmod u-r user10    // can't cd to user10
+
+cd user10           // can access
+pwd
+cd /
+cd home
+ls -l
+
+whoami              // user10
+
+
+
+=>Add Permission
+whoami              // user10
+=>add other permission
+chmod o+r user10
+chmod o+wx user10
+ls -l
+
+
+=>add group permission
+chmod g+rwx user10
+ls -l
+
+=>add user permission
+chmod u+r user10
+chmod u+wx user10
+ls -l
+
+cd user10
+pwd
+cd /
+cd home
+ls -l
+
+
+=>Remove All Permission (per)
+whoami              // user10
+chmod a-r user10
+chmod a-w user10
+chmod a-x user10
+ls -l
+
+=>Add All Permission (per)
+whoami              // user10
+chmod a+r user10
+chmod a+w user10
+chmod a+x user10
+ls -l
+
+=>Remove/Add All Permission (per)
+whoami              // user10
+chmod a-rwx user10
+ls -l
+chmod a+rwx user10
+ls -l
+
+-------------------------------------
+
+=>File permission for Group Members
+
+compgen -u
+
+su user10
+123456789
+cd /
+cd home
+ls -l
+chmod g+rwx user10
+ls -l
+exit
+
+
+su user2
+123456789
+cd /
+cd home
+ls -l
+cd user10               // Permission denied
+exit
+
+
+compgen -g
+groups user10           (check user)
+getent group user10
+members user10
+
+su user2
+123456789
+cd /
+cd home
+ls -l
+cd user10
+ls
+mkdir folder3byuser2
+ls
+rm -rf folder2byadmin
+ls
+exit
+
+sudo gpasswd -d user2 user10
+members user10
+
+su user2
+123456789
+cd /
+cd home
+ls -l
+cd user10
+exit
+
+----------------------
+
+mkdir mygroup
+useradd user2
+useradd user10
+
+sudo addgroup mygroup (with message) (or) sudo groupadd mygroup (without message)
+compgen -g
+groups mygroup      // (see owner) no such owner
+
+getent group mygroup
+members mygroup
+
+sudo adduser user10 mygroup
+sudo adduser user2 mygroup
+
+su user10
+123456789
+cd /
+cd home
+ls -l
+cd user10
+pwd
+exit
+
+su user2
+123456789
+cd /
+cd home
+ls -l
+cd user10               // Permission denied
+exit
+
+----------------------
+
+=> Change Group Ownership ( chgrp = change group ownership ) ( -R = Recursively , to recursively change the group ownership
+                                                                     of all files and directories under a given directory )
+Syntax : sudo chgrp -R groupname directory
+
+
+su user2
+123456789
+cd /
+cd home
+ls -l
+cd user10               // Permission denied
+exit
+
+
+whoami                  // administrator
+cd /
+cd home
+ls -l
+
+sudo chgrp -R user2 user10
+
+ls -l
+
+exit
+su user2
+123456789
+cd /
+cd home
+ls -l
+cd user10
+pwd
+exit
+
+su user10
+123456789
+cd /
+cd home
+ls -l
+cd user10
+pwd
+exit
+
+
+
+
+
+su user3
+123456789
+cd /
+cd home
+ls -l
+cd user10               // Permission denied
+exit
+
+getent group mygroup
+members mygroup
+
+sudo adduser user3 mygroup
+
+getent group mygroup
+members mygroup
+
+whoami                      //administrator
+cd /
+cd home
+ls -l
+sudo chgrp -R mygroup user10
+ls -l
+cd user10
+exit
+
+
+
+
+whoami                      //administrator
+cd /
+cd home
+ls -l
+sudo chgrp -R user10 user10
+ls -l
+
+su user2
+123456789
+cd /
+cd home
+ls -l
+cd user10               // Permission denied
+exit
+
+//-----------------------------
+
+=> Change Folder Ownership
+Syntax : sudo chown -R newowner:groupname directory     ( chown = change file owner and group )
+
+whoami
+cd /
+cd home
+ls -l
+sudo chown -R user2:user10 user10
+ls -l
+
+su user2
+123456789
+cd /
+cd home
+ls -l
+cd user10
+pwd
+exit
+
+//-----------------------------
+
+=> Permission Using Numeric Mode
+
+chmod ugo+r directory
+or
+chmod 444 directory
+
+
+su user2
+123456789
+cd /
+cd home
+ls -l
+
+
+chmod 777 user2
+ls -l
+chmod 444 user2
+ls -l
+chmod 755 user2
+ls-l
+
+//-----------------------------

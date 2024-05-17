@@ -1,0 +1,129 @@
+:root{
+	--gn:green;
+	--oc:orange;
+	--rc:red;
+}
+
+.div1{
+	width:80px;
+	height:80px;
+	background-color: var(--gn);
+/*                    rotate(xy)*/
+	transform: rotate(45deg);
+}
+
+.div2{
+	width:100px;
+	height:100px;
+	background-color: var(--oc);
+
+/*    transform: rotate(360deg);*/
+/*    transform: rotate(1turn);*/
+	transform: rotate(-45deg);
+}
+
+.div3{
+	width:125px;
+	height:125px;
+	background-color: var(--rc);
+/*                rotateX(x)*/
+	transform: rotateX(45deg);
+}
+
+.div4{
+	width:150px;
+	height:150px;
+	background-color: var(--gn);
+/*                rotateX(y)*/
+/*	transform: rotateY(45deg);*/
+	transform: rotateY(-45deg);
+}
+
+.div5{
+	width:200px;
+	height:200px;
+	background-color: var(--oc);
+
+/*	              default= 1 */
+/*                scale(xy) */
+/*	transform: scale(0);*/
+/*	transform: scale(1.5);*/
+	transform: scale(0.5);
+}
+
+.div6{
+	width:225px;
+	height:225px;
+	background-color: var(--rc);
+/*                rotateX(x)*/
+	transform: skew(20deg);
+	transform: skew(-20deg);
+}
+
+
+
+.div7{
+	width:250px;
+	height:250px;
+	background-color: var(--gn);
+
+
+/*             translate(x) */
+
+	transform: translate(100px);
+	transform: translate(50%);
+
+	transform: translate(-100px);
+	transform: translate(-50%);
+
+	transform: translateX(100px);
+	transform: translateX(100%);
+
+	transform: translateY(100px);
+	transform: translateY(-100px);
+	transform: translateY(-100%);
+
+
+}
+
+
+.div8{
+    width: 275px;
+    height: 275px;
+    background-color: var(--oc);
+
+/*             translate (x,y);*/
+    transform: translate(50%,50%);
+    transform: translate(50%,50%);
+    transform: translate(50%,50%);
+
+    transform: translateX(-50%) translateY(-50%);
+}
+
+h1{
+	text-align: center;
+	color:green;
+}
+
+p.text{
+	text-align: justify;
+	color:steelblue;
+}
+
+@media(max-width:600px){
+	h1{
+	color:gold;
+	font-size: 20px;
+}
+
+p.text{
+	color:red;
+}
+
+}
+
+
+
+
+
+

@@ -1,0 +1,19 @@
+=>locate (sudo apt install mlocate (or) sudo apt install plocate)
+
+cd /var/lib/plocate
+ls
+
+cd --
+
+sudo updatedb
+
+locate l5file
+locate -i l5file      (-i means no case sensitive)
+locate -i 'l5file'
+locate 'L5file'
+locate -i '*l5file*'
+locate -i '*l5file'   (no result)
+locate -i 'l5file*'
+locate -i l5file*
+
+

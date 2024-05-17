@@ -1,0 +1,88 @@
+=> File Permission
+
+ls - l
+
+Note
+
+-           File
+d           directory
+
+-rw-rw-r-- 1 administrator administrator 1239 Feb 21 23:03 l11symboliclink.txt
+
+-rw-rw-r--            = permission
+1                     = number of links
+administrator         = Owner Name
+administrator         = Group Name
+1239                  = Number of bytes in the file
+Feb 21 23:03          = Last modification time
+l11symboliclink.txt   = File Name
+
+
+.           This directory
+..          The parent directory
+
+
+ls -l
+cd yourfolder9/
+ls -la
+
+cd -
+
+ls -l
+cd l11folder
+ls -l
+ls -la
+
+----------------------------------------------------
+
+=>File permission
+
+Read    (r) =   4       allows a file to be read
+Write   (w) =   2       allows a file to be modified
+Execute (x) =   1       allows the execution of a file
+
+
+=> Permission Categories
+
+Category    Symbol
+user        u
+group       g
+other       o
+all         a
+
+
+=> Changing Permissions
+
+Item        Meaning
+chmod       change mode command
+ugoa        user group other all
++-=         Add, Subtract, Set Permission
+rwx         read, write, execute
+
+
+=> Directory Listening Attributes
+
+numeric value           4(read)           2(write)           1(execute)         Permission Name
+0                          -                  -                   -             no permission
+1                          -                  -                   x             execute only
+2                          -                  w                   -             write only
+3                          -                  w                   x             write and execute
+4                          r                  -                   -             read only
+5                          r                  -                   x             read and execute
+6                          r                  w                   -             read and write
+7                          r                  w                   x             read,write and execute
+
+
+(Note : to go)
+d or -      rwx         rwx         rwx
+type        user/owner  group       other
+
+
+=>Commonly Used Permission
+Permission              Octal
+-rwx------              700
+-rwxr-xr-x              755
+-rw-rw-r--              664
+-rw-rw----              660
+-rw-r--r--              644
+-rwxrwxrwx              777

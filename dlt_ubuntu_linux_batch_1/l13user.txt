@@ -1,0 +1,305 @@
+=> For Shutdown
+sudo poweroff
+
+=> For restart (reboot)
+sudo reboot
+
+=>Check Current User
+who         //administrator tty2         2024-02-21 21:56 (tty2)
+whoami      //administrator
+
+=>Check Host Name
+hostname    //ubuntum1a
+cat /etc/hostname //ubuntum1a
+
+=>Change Host Name
+hostnamectl
+hostnamectl set-hostname KOTHA-PC
+hostname
+sudo reboot
+
+------------------------------------------------------------
+
+=>Server Uptime
+uptime
+
+top
+ctl+c (exit)
+
+w
+
+sudo apt-get install glances
+glances
+
+------------------------------------------------------------
+
+=>Check 32 bit or 64 bit processor
+uname -a                //Darwin ThuTas-MacBook-Air.local 23.3.0 Darwin Kernel Version 23.3.0: Wed Dec 20 21:30:27 PST 2023; root:xnu-10002.81.5~7/RELEASE_ARM64_T8103 arm64
+uname -i or uname -m    //arm64
+getconf LONG_BIT        //64
+
+------------------------------------------------------------
+
+=>Check Ubuntu Version
+hostnamectl             // detail info
+cat /etc/os-release     // detail info
+cat /etc/issue          // Ubuntu 23.04 \n\1
+
+
+------------------------------------------------------------
+
+=>Upgrade New OS Version
+hostnamectl
+do-release-upgrade -c           (Check for a new Ubuntu release version before upgrade)
+sudo do-release-upgrade         (upgrade)
+
+------------------------------------------------------------
+
+=>Login as root user
+apt-get-update          // 13: permission denied
+
+sudo -s
+(Enter administrator password)
+apt-get-update
+exit
+
+(or)
+
+sudo su
+apt-get-update
+whoami                 //root
+exit
+
+
+=>Setpassword or Changing root's password
+sudo passwd
+new password : 123456789
+return new password : 123456789
+
+sudo -s
+
+=>Login as Root User
+=>Method 1
+sudo -s             // root@administrator:home/administrator#
+whoami
+exit
+
+=>Method 2
+sudo su             // root@administrator:home/administrator#
+whoami
+exit
+
+=>Method 3
+su -                // root@administrator:~#
+password:123456789
+whoami
+su administrator
+
+=>Method 4
+su                  // root@administrator:home/administrator#
+whoami
+password:123456789
+exit
+
+
+=>Changing Password of Current User
+su
+password:123456789
+whoami
+
+passwd
+Current password:123456789
+New password:123456789abc
+retry New password:123456789abc
+
+
+=>Create New User Account
+=>Method 1
+sudo useradd user1              (just created account, without user1 folder)
+=>Method 2
+sudo useradd user2 -m           (cd / ,cd home , ls = you will see system created user2 folder in under home )
+
+
+
+
+=>Display all users
+compgen -u                                       (only username)
+getent passwd       (or)        cat /etc/passwd  (all info)
+
+=>Display single user
+getent passwd user1                              (single user all info)
+id                                               (current login group detail info)
+id user1                                         (single user group info)
+
+
+
+
+
+
+=>Set new user password in terminal
+sudo passwd user1
+new Password:123456789
+return new Password:123456789
+
+sudo passwd user2
+new Password:123456789
+return new Password:123456789
+
+sudo passwd user3
+new Password:123456789
+return new Password:123456789
+
+
+=>Switch user in terminal
+su user1
+password:123456789
+whoami
+exit
+
+su user2
+password:123456789
+whoami
+exit
+
+
+ls -l
+su users1
+password : 123456789
+whoami
+cd /
+ls
+cd home
+ls -l
+cd administrator            //error can't access
+cd user2                    //error can't access
+mkdir user1                 //error can't access
+ls
+exit
+
+ls -l
+su users2
+password : 123456789
+whoami
+cd /
+ls
+cd home
+ls -l
+cd administrator            //error can't access
+cd user1                    //error can't access
+cd user2
+mkdir userfolder2
+ls
+exit
+
+ls -l
+su users3
+password : 123456789
+whoami
+cd /
+ls
+cd home
+ls -l
+cd administrator            //error can't access
+cd user2                    //error can't access
+cd user3
+mkdir userfolder3
+ls
+exit
+
+
+
+
+=>Delete User
+=>Method 1
+sudo deluser user2  (or)  sudo userdel user1              (delete user without deleting user files and directories)
+=>Method 2
+sudo deluser --remove-home user3                           (delete user deleting user files and directories under home folder)
+
+
+
+compgen -u
+cd /
+ls
+cd home
+ls -l                               (result = remain only administrator & user2 folders)
+
+
+sudo useradd user1          (with no message/ with no password / with no info)
+compgen -u
+
+sudo adduser user2          (with message / with password / with info)
+compgen -u
+
+sudo adduser user3
+compgen -u
+=sudo passwd user3
+new password=123456789
+retype new password=123456789
+=su user3
+password=123456789
+whoami
+exit
+whoami
+
+
+
+=>Lock or Unlock the user password
+
+sudo passwd -l user3                (lock)
+sudo passwd -u user3                (unlock)
+
+sudo passwd -l user3
+=su user3
+password=123456789                  (su: Authentication Failure)
+whoami
+
+sudo passwd -u user3
+=su user3
+password=123456789
+whoami
+exit
+
+
+
+=>Rename User
+compgen -u
+sudo useradd user4 -m               // create user          sudo useradd user5 -m
+sudo passwd usr4                    // create password      sudo passwd user5
+new password = 123456789
+retry new password = 123456789
+
+whoami
+cd /
+ls
+cd home
+ls -l
+cd
+
+su user4
+password = 123456789
+whoami
+exit
+whoami
+
+=>Method 1                  ( user name changed but home/user4 directory will not change. )
+sudo username -l user40 user4
+=>Method 2                  ( user name changed and also home/user4 directory in same time. )
+sudo usermod -l user50 -d /home/user50 -m user5
+
+cd /
+ls
+cd home
+ls -l
+cd
+
+su user40
+password =123456789
+whoami
+exit
+whoami
+
+su user50
+password =123456789
+whoami
+exit
+whoami
