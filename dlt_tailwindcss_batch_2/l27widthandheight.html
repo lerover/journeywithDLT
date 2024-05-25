@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .bg-primary{
+            background-color: blue;
+        }
+
+        .bg-secondary{
+            background-color: #666;
+        }
+
+        .bg-success{
+            background-color: green;
+        }
+
+        .bg-info{
+            background-color: skyblue;
+        }
+
+        .bg-warning{
+            background-color: orange;
+        }
+
+        .bg-danger{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>This is tailwind css using CDN Link</h1>
+
+    <div class="w-40 bg-primary">Div1</div>
+    <div class="w-96 bg-secondary">Div 2</div>
+    <div class="w-auto bg-success">Div 3</div>
+    <div class="w-full bg-info">Div 4</div>
+    <div class="w-screen bg-warning">Div 5</div>
+    <div class="w-1/2 bg-danger">Div 6</div>
+
+    <br><hr><br>
+
+    <div class="w-40 h-20 bg-primary">Div1</div>
+    <div class="w-96 h-96 bg-secondary">Div 2</div>
+    <div class="w-auto h-auto bg-success">Div 3</div>
+    <div class="w-full h-full bg-info">Div 4</div>
+    <div class="w-screen h-screen bg-warning">Div 5</div>
+    <div class="w-1/2 h-96 bg-danger">
+        <div class="w-full h-1/2 bg-success"></div>
+    </div>
+</body>
+</html>
