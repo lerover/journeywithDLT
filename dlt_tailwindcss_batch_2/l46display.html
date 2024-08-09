@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>saturate</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .box{
+                width: 600px;
+                height: 600px;
+                background-color: gray;
+            }
+
+            .div1,.div2{
+                background-color: black;
+                width: 100px;
+                height: 100px;
+            }
+
+            .div2{
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+
+        <h1>flex</h1>
+        <div class="box flex justify-start">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+
+        <h1>justify-content</h1>
+        <div class="box flex justify-start">
+            <div class="div1"></div>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>justify-content(center)</h1>
+        <div class="box flex justify-center">
+            <div class="div1"></div>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>justify-content(end)</h1>
+        <div class="box flex justify-end">
+            <div class="div1"></div>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-item(start)</h1>
+        <div class="box flex items-start">
+            <div class="div1"></div>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-item(center)</h1>
+        <div class="box flex items-center">
+            <div class="div1"></div>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-item(end)</h1>
+        <div class="box flex items-end">
+            <div class="div1"></div>
+
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1 class="bg-green-500 inline">Save Myanmar</h1>
+        <h1 class="bg-green-500 inline">Save Myanmar</h1>
+
+        <br>
+
+        <span class="bg-rose-300 block">Save Myanmar</span>
+        <span class="bg-rose-300 block">Save Myanmar</span>
+
+        <br>
+
+        <span class="bg-sky-300 inline-block ">Hello Yangon</span>
+        <span class="bg-sky-300 inline-block ">Hello Yangon</span>
+
+        <br>
+
+        <h1>justify-items-start(grid display)</h1>
+        <div class="box grid justify-items-start">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>justify-items-center(grid display)</h1>
+        <div class="box grid justify-items-center">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>justify-items-end(grid display)</h1>
+        <div class="box grid justify-items-end">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>justify-items-stretch(grid display)</h1>
+        <div class="box grid justify-items-stretch">
+            <div class="div1"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br> 
+
+        <h1>justify-self-start(grid display)</h1>
+        <div class="box grid ">
+            <div class="div1 justify-self-start"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>justify-self-end(grid display)</h1>
+        <div class="box grid ">
+            <div class="div1 justify-self-end"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>justify-self-center(grid display)</h1>
+        <div class="box grid ">
+            <div class="div1 justify-self-center"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>justify-self-auto(grid display)</h1>
+        <div class="box grid ">
+            <div class="div1 justify-self-auto"></div>
+            <div class="div2"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-self-start(flex display)</h1>
+        <div class="box flex ">
+            <div class="div1"></div>
+            <div class="div2 self-start"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-self-center(flex display)</h1>
+        <div class="box flex ">
+            <div class="div1"></div>
+            <div class="div2 self-center"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-self-end(flex display)</h1>
+        <div class="box flex ">
+            <div class="div1"></div>
+            <div class="div2 self-end"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-content</h1>
+        <div class="box grid grid-cols-3 content-start">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-content</h1>
+        <div class="box grid grid-cols-3 content-center">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-content</h1>
+        <div class="box grid grid-cols-3 content-end">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-content</h1>
+        <div class="box grid grid-cols-3 content-between">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-content</h1>
+        <div class="box grid grid-cols-3 content-around">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <h1>align-content</h1>
+        <div class="box grid grid-cols-3 content-evenly">
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+            <div class="div1"></div>
+            <div class="div2"></div>
+            <div class="div1"></div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+    </body>
+</html>

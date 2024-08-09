@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Decoration</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+
+        <style>
+            .box{
+                width: 1200px;
+                height:200px;
+                background-color: steelblue;
+                margin: 20px;
+            }
+
+            .box img:hover{
+                transform: translate(900px);
+            }
+        </style>
+    </head>
+    <body>
+
+        <div class="box">
+            <img src="./img/cutedog.jpeg" class="transition duration-500 " alt="">
+        </div>
+
+    </body>
+</html>
