@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Modal Box</title>
+        <link rel="stylesheet" href="./style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    </head>
+
+    <body>
+
+        <div class="container">
+            <h2>Modal sign up form</h2>
+
+            <button type="button" id="signup-btn">Sign Up</button>
+            <button type="button" id="fullscreen-btn">Open Full Screen</button>
+            <button type="button" id="closefullscreen-btn">Close Full Screen</button>
+
+        </div>
+
+        <div id="signupmodal" class="modal">
+            <span class="btn-close" title="Close Modal">
+                &times;
+            </span>
+            
+            <form action="" method="">
+                <h2>Register Form</h2>
+
+                <div class="input-group">
+                    <i class="fas fa-user icon"></i>
+                    <input type="text" name='username' id="username" class="input-group-text" placeholder="Username">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-envelope icon"></i>
+                    <input type="email" name='email' id="email" class="input-group-text" placeholder="Email">
+                </div>
+
+                <div class="input-group">
+                    <i class="fas fa-key icon"></i>
+                    <input type="password" name='password' id="password" class="input-group-text" placeholder="Password">
+                </div>
+
+                <button type="submit" class="btn">Register</button>
+            </form>
+        </div>
+
+
+        <script src="script.js"></script>
+    </body>
+
+</html>
