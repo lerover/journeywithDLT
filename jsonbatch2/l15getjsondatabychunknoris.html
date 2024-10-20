@@ -1,0 +1,57 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style type="text/css"></style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body class="d-flex align-items-center" style="height: 100vh;">
+
+    <div class="container text-center m-auto">
+        <div id="display" class="mb-3"></div>
+        <button type="button" id="btn" class="btn btn-primary w-50" style="height: 50px;">Load Data</button>
+    </div>
+
+    <script type="text/javascript">
+
+
+        const getdisplay = document.getElementById('display');
+        const getbtn = document.getElementById('btn');
+
+        getbtn.addEventListener('click',function(){
+            loaddata();
+        })
+
+        function loaddata(){
+            const uri = "https://api.chucknorris.io/jokes/random";
+            const xmlhttp = new XMLHttpRequest(); 
+
+            xmlhttp.onreadystatechange = function(){
+                if(xmlhttp.readyState === 4 && xmlhttp.status === 200){
+                    let result = xmlhttp.responseText;
+
+                    result = JSON.parse(result);
+
+                    console.log(result);
+
+                    getdisplay.innerHTML = `
+                    <img src="${result.icon_url}" style="width:100px" class="mb-5"/>
+                    <h1>${result.value}</h1>`;
+                }
+            }
+
+            xmlhttp.open("GET",uri,true);
+            xmlhttp.send();
+            
+        }
+
+    </script>
+</body>
+</html>
+
+

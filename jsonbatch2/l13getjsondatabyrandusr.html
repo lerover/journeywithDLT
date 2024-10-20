@@ -1,0 +1,61 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+
+    <script type="text/javascript">
+        
+        let uri = "https://randomuser.me/api/";
+
+        const xmlhttp = new XMLHttpRequest();
+
+        console.log(xmlhttp);
+
+        xmlhttp.open("GET",uri,true); //true mean synchronize
+        xmlhttp.send();
+
+        xmlhttp.onreadystatechange = function(){
+            if(xmlhttp.readyState === 4 && xmlhttp.status === 400){
+                let result = xmlhttp.responseText;
+
+                console.log(result);
+
+                result = JSON.parse(result);
+                console.log(result);
+            }
+        }
+
+
+        // let result;
+        // if(xmlhttp.readyState === 4 && xmlhttp.status ===200){
+            
+        //     result = xmlhttp.responseText;
+        // }
+
+        // result = JSON.parse(result);
+
+        // console.log(result);
+        // console.log(result.results[0].name.title,result.results[0].name.first,result.results[0].name.last)
+    
+
+    </script>
+</body>
+</html>
+
+
+<!-- => xmlhttp.onereadystatechange 
+xmlhttp.readyState === 4
+
+0 = UNSENT open() has not been called yet 
+1 = OPENED send() has been called
+2 = HEADER_RECEIVED send() has been called. and headers and status are available
+3 = LOADING downloading, responseText hold partial datas
+4 = DONE the operation is completed  -->

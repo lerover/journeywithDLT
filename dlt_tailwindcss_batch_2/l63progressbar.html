@@ -1,0 +1,41 @@
+
+</html><!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Progress Bar</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+
+        </style>
+    </head>
+    <body class="bg-stone-900">
+
+        <div class="h-screen flex justify-center items-center">
+
+            <div class="w-96 bg-white rounded-xl p-5">
+                <p class="text-[gray] text-[22px]">Download File</p>
+
+                <div class="w-full rounded-full h-1.5 bg-gray-200 mt-5 h-4">
+                    <div class="w-[75%] rounded-full h-1.5 bg-violet-900 text-white flex justify-center items-center h-full">75%</div>
+                </div>
+
+                <div class="w-full rounded-full h-1.5 bg-gray-200 mt-5 h-4">
+                    <div class="w-[75%] rounded-full h-1.5 bg-violet-900 text-white flex justify-center items-center h-full bg-gradient-to-r from-green-600 to-blue-500">75%</div>
+                </div>
+
+                <div class="w-full rounded-full h-1.5 bg-gray-200 mt-5 h-4">
+                    <div class="w-[75%] rounded-full h-1.5  text-white flex justify-center items-center h-full" style="background:repeating-linear-gradient(45deg, blue 0, blue 20px,red 20px, red 40px);">75%</div>
+                </div>
+
+                <div class="w-full rounded-full h-1.5 bg-gray-200 mt-5 h-4">
+                    <div class="w-[75%] rounded-full h-1.5 text-white flex justify-center items-center h-full bg-[repeating-linear-gradient(45deg,var(--tw-gradient-from)0,var(--tw-gradient-from)20px,var(--tw-gradient-to)20px,var(--tw-gradient-to)40px)] from-indigo-400 to-indigo-500">75%</div>
+                </div>
+
+
+                <p class="text-gray-500 text-xs mt-5">75% downloaded. About 25 minutes remaining.</p>
+            </div>
+        </div>
+    </body>
+</html>

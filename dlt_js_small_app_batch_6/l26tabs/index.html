@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <title>Side Bar</title>
+        <link rel="stylesheet" href="./style.css">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+    </head>
+
+    <body>
+
+       <div class="container">
+
+        <h2>Tabs</h2>
+
+        <ul class="nav">
+            <li class="nav-item">
+                <button type="button " id="autoclick" class="tablinks active" onclick="gettab(event,'home')">Home</button>
+            </li>
+
+            <li class="nav-item">
+                <button type="button " id="" class="tablinks " onclick="gettab(event,'profile')">Profile</button>
+            </li>
+
+            <li class="nav-item">
+                <button type="button " id="" class="tablinks " onclick="gettab(event,'contact')">Contact</button>
+            </li>
+
+            <li class="nav-item">
+                <button type="button " id="" class="tablinks " onclick="gettab(event,'settings')">Settings</button>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div class="tab-panel" id="home">
+                <span class="btn-close">&times;</span>
+                <h3>This is Home Information</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem iure harum nam sunt illo adipisci modi quos eius, non porro hic magnam aspernatur unde numquam? Doloribus ducimus amet inventore porro.
+                </p>
+            </div>
+
+            <div class="tab-panel" id="profile">
+                <span class="btn-close">&times;</span>
+                <h3>This is Profile Information</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem iure harum nam sunt illo adipisci modi quos eius, non porro hic magnam aspernatur unde numquam? Doloribus ducimus amet inventore porro.
+                </p>
+            </div>
+
+            <div class="tab-panel" id="contact">
+                <span class="btn-close">&times;</span>
+                <h3>This is contact Information</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem iure harum nam sunt illo adipisci modi quos eius, non porro hic magnam aspernatur unde numquam? Doloribus ducimus amet inventore porro.
+                </p>
+            </div>
+
+            <div class="tab-panel" id="settings">
+                <span class="btn-close">&times;</span>
+                <h3>This is Settings Information</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem iure harum nam sunt illo adipisci modi quos eius, non porro hic magnam aspernatur unde numquam? Doloribus ducimus amet inventore porro.
+                </p>
+            </div>
+        </div>
+       </div>
+
+        <script src="app.js"></script>
+    </body>
+
+</html>

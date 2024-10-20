@@ -1,0 +1,19 @@
+//UI
+
+let getmodalbtn = document.getElementById('modal-btn'),
+    getmodalbox = document.getElementById('login-modal'),
+    getbtnclose = document.querySelector('.btn-close');
+
+    getmodalbtn.addEventListener('click',function(){
+        getmodalbox.style.display = "block";
+    });
+
+    getbtnclose.addEventListener('click',function(){
+        getmodalbox.style.display = 'none';
+    })
+
+    window.onclick = function(e){
+        if(e.target === getmodalbox){
+            getmodalbox.style.display = 'none';
+        }
+    }
